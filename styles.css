@@ -7,69 +7,22 @@
     box-sizing: border-box;
 }
 
-/* General body font size and line height for better readability */
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.8;  /* Increased line height */
-    background-color: #f9f9f9;
-    color: #333;
+    line-height: 1.7;
+    background-color: #1c1c1c; /* Dark gray background */
+    color: #e0e0e0; /* Light gray text */
     padding: 20px;
     font-size: 17px;  /* Slightly larger font */
 }
 
-/* About Section */
-.container {
-    max-width: 1000px;
-    margin: 0 auto 50px auto;
-    padding: 20px 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);  /* Softer shadow for sections */
-}
-
-.container p {
-    margin-bottom: 20px;  /* More spacing between paragraphs */
-}
-
-.container strong {
-    font-weight: 500;
-    color: #e63946;  /* Subtle red accent for key points */
-}
-
-/* Divider between text sections */
-.divider {
-    height: 1px;
-    background-color: #e0e0e0;
-    margin: 20px 0;
-    border: none;
-}
-
-/* Subtle italic for emphasis */
-.container em {
-    font-style: italic;
-    color: #666;
-}
-
-/* Bullet points for important highlights */
-ul.highlights {
-    list-style-type: disc;
-    padding-left: 40px;
-    margin-top: 20px;
-}
-
-ul.highlights li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-
 /* Header Styles */
 header {
-    background: #fff;
-    color: #333;
+    background: #2d2d2d;  /* Dark gray */
+    color: #ffffff;  /* White text */
     padding: 1rem 0;
     text-align: center;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);  /* Minimalist shadow */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -90,21 +43,21 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: #e0e0e0;  /* Light gray */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #e63946; /* Red accent */
+    color: #3A86FF; /* Muted blue accent */
 }
 
 /* Hero Section */
 #hero {
-    background: #fff;
-    color: #333;
-    padding: 100px 20px;  /* Increased padding for breathing room */
+    background: #2d2d2d;
+    color: #ffffff;
+    padding: 100px 20px;
     text-align: center;
     margin-bottom: 30px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
@@ -118,36 +71,36 @@ nav ul li a:hover {
 
 .hero-content p {
     font-size: 1.2rem;
-    color: #666;  /* Softer text color */
+    color: #b0b0b0;  /* Softer gray text */
 }
 
 /* Section Styles */
 .container {
     max-width: 1000px;
     margin: 0 auto 50px auto;
-    padding: 20px;
-    background-color: #fff;
+    padding: 20px 30px;
+    background-color: #2d2d2d;  /* Slightly lighter gray container */
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);  /* Softer shadow for sections */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 20px;
-    color: #333;
+    color: #ffffff; /* White for headings */
 }
 
 h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
     font-weight: 500;
-    color: #333;
+    color: #ffffff; /* White for headings */
 }
 
 /* Universal styles for lists */
 ul {
-    padding-left: 20px; /* Softer indentation */
+    padding-left: 20px;
     margin-bottom: 15px;
 }
 
@@ -166,19 +119,19 @@ li {
 
 .job h4 {
     font-size: 1.3rem;
-    color: #e63946; /* Red accent */
+    color: #3A86FF; /* Muted blue for job titles */
     margin-bottom: 5px;
 }
 
 .company {
     font-style: italic;
-    color: #666;
+    color: #b0b0b0; /* Softer gray for company names */
 }
 
 .years {
     float: right;
     font-weight: 500;
-    color: #888;
+    color: #999999; /* Muted gray for years */
 }
 
 .education {
@@ -195,10 +148,18 @@ li {
     margin-bottom: 10px;
 }
 
+/* Divider */
+.divider {
+    height: 1px;
+    background-color: #444;
+    margin: 20px 0;
+    border: none;
+}
+
 /* Footer */
 footer {
-    background-color: #fff;
-    color: #888;
+    background-color: #2d2d2d;
+    color: #b0b0b0;
     text-align: center;
     padding: 1rem;
     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
