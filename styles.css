@@ -91,12 +91,44 @@ h2 {
     color: #ffffff; /* White for headings */
 }
 
+/* Subheader styles for better visual separation */
 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 500;
-    color: #ffffff; /* White for headings */
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 30px;
+    color: #ffffff;
 }
+
+/* More spacing around dividers and sections */
+.divider {
+    height: 2px;
+    background-color: #444;
+    margin: 30px 0;
+    border: none;
+}
+
+/* Larger padding for container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    padding: 30px 40px; /* Increased padding */
+    background-color: #2d2d2d; /* Slightly lighter gray */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Bullet points for key highlights */
+ul.highlights {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-top: 20px;
+}
+
+ul.highlights li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
 
 /* Universal styles for lists */
 ul {
