@@ -7,14 +7,61 @@
     box-sizing: border-box;
 }
 
+/* General body font size and line height for better readability */
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.7;
+    line-height: 1.8;  /* Increased line height */
     background-color: #f9f9f9;
     color: #333;
     padding: 20px;
-    font-size: 16px;
+    font-size: 17px;  /* Slightly larger font */
 }
+
+/* About Section */
+.container {
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);  /* Softer shadow for sections */
+}
+
+.container p {
+    margin-bottom: 20px;  /* More spacing between paragraphs */
+}
+
+.container strong {
+    font-weight: 500;
+    color: #e63946;  /* Subtle red accent for key points */
+}
+
+/* Divider between text sections */
+.divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 20px 0;
+    border: none;
+}
+
+/* Subtle italic for emphasis */
+.container em {
+    font-style: italic;
+    color: #666;
+}
+
+/* Bullet points for important highlights */
+ul.highlights {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-top: 20px;
+}
+
+ul.highlights li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
 
 /* Header Styles */
 header {
