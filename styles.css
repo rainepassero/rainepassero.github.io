@@ -77,6 +77,16 @@ nav ul li a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Universal Styles for all unordered lists (ul) */
+ul {
+    padding-left: 40px; /* Adjusts padding for all bullet points */
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 10px; /* Adds space between list items */
+}
+
 /* Resume Section Styles */
 .resume-section {
     padding: 20px 0;
@@ -108,9 +118,10 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 
+/* Expertise Section (Inherits the new padding from ul) */
 .skills {
     list-style-type: circle;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 
 .skills li {
