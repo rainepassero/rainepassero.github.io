@@ -53,26 +53,89 @@ nav ul li a:hover {
     color: #3A86FF; /* Muted blue accent */
 }
 
-/* Hero Section */
+/* Hero Section with background gradient and font styling */
 #hero {
-    background: #2d2d2d;
+    background: linear-gradient(135deg, #1c1c1c, #2d2d2d);  /* Subtle gradient */
     color: #ffffff;
-    padding: 100px 20px;
+    padding: 120px 20px;  /* Increased padding for spacing */
     text-align: center;
     margin-bottom: 30px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
-.hero-content h2 {
-    font-size: 3rem;
+/* Animated background effect */
+#hero::before {
+    content: "";
+    background: url('path-to-your-background-image.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;  /* Adds a very light background texture */
+    z-index: 0;
+}
+
+/* Styling for the main hero heading */
+.hero-content h1 {
+    font-size: 4rem;  /* Larger and more engaging */
     margin-bottom: 1rem;
-    font-weight: 500;
+    font-weight: 700;  /* Stronger font weight */
+    position: relative;
+    z-index: 1;  /* Ensures text is on top of background */
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    color: #b0b0b0;  /* Softer gray text */
+/* Subtle text shadow for the heading */
+.hero-content h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Creates depth */
 }
+
+/* Styling for the tagline */
+.hero-content p {
+    font-size: 1.4rem;  /* Increase size for emphasis */
+    color: #b0b0b0;  /* Softer text color */
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Call to action button */
+.cta-button {
+    display: inline-block;
+    background-color: #3A86FF;  /* Muted blue button */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Button hover effect */
+.cta-button:hover {
+    background-color: #2d6fd8;  /* Darker blue on hover */
+}
+
+/* Optional: Text animation for a dynamic effect */
+.hero-content h1, .hero-content p, .cta-button {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards ease-out;
+    animation-delay: 0.3s;  /* Delays the animation for a smoother effect */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Section Styles */
 .container {
