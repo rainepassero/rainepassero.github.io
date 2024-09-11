@@ -46,32 +46,39 @@ header {
 
 /* Navigation Styles */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
+    background-color: #2d2d2d; /* Dark gray background for nav */
+    padding: 15px 0; /* Add padding to give it some space */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    justify-content: center; /* Center the links */
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-left: 20px;
+    margin: 0 25px; /* Spacing between the links */
 }
 
 nav ul li a {
-    color: #e0e0e0;  /* Light gray */
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    color: #e0e0e0; /* Light gray text */
+    font-size: 1.1rem; /* Slightly increase the font size */
+    font-weight: 500; /* Make the text a bit bolder */
+    text-decoration: none; /* Remove underlines */
+    padding: 10px 15px; /* Add padding around links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
 }
 
+/* Hover effect for links */
 nav ul li a:hover {
-    color: #3A86FF; /* Muted blue accent */
+    background-color: #3A86FF; /* Muted blue background on hover */
+    color: #ffffff; /* White text on hover */
+    border-radius: 5px; /* Rounded corners for hover effect */
 }
+
 
 /* Hero Section with background gradient and font styling */
 #hero {
