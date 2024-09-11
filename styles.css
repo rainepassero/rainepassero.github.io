@@ -25,6 +25,14 @@ header {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo Styles */
+.logo-img {
+    width: 150px;  /* Adjust logo size */
+    height: auto;  /* Maintain aspect ratio */
+    margin-right: 20px;  /* Add space between logo and nav */
+}
+
+/* Navigation Styles */
 nav {
     display: flex;
     justify-content: space-between;
