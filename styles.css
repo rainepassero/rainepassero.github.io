@@ -15,6 +15,18 @@ body {
     padding: 20px;
     font-size: 17px;  /* Slightly larger font */
 }
+/* General link styles */
+a {
+    color: #3A86FF;  /* Set this to your preferred color */
+    text-decoration: none;  /* Remove the underline */
+    transition: color 0.3s ease;  /* Smooth transition for hover */
+}
+
+/* Link hover state */
+a:hover {
+    color: #ffffff;  /* Changes to white when hovered */
+    text-decoration: underline;  /* Optionally add underline on hover */
+}
 
 /* Header Styles */
 header {
