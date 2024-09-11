@@ -250,6 +250,45 @@ li {
 }
 
 /* Expertise Section */
+/* Style for the expertise section */
+#expertise {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styling for the aside section with the retro setup */
+.retro-setup-aside {
+    background-color: #2d2d2d;  /* Slightly lighter background for contrast */
+    padding: 20px;
+    margin-top: 30px;  /* Add space between expertise content and the aside */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+}
+
+/* Styling for the retro image */
+.retro-image {
+    width: 100%;  /* Make the image responsive */
+    max-width: 500px;  /* Limit the size of the image */
+    height: auto;  /* Maintain aspect ratio */
+    display: block;
+    margin: 20px auto;  /* Center the image */
+    border-radius: 8px;  /* Optional: Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Optional: Soft shadow */
+}
+
+/* Additional styling for the aside's heading and paragraph */
+.retro-setup-aside h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.retro-setup-aside p {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
 .skills {
     list-style-type: circle;
 }
