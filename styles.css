@@ -259,33 +259,33 @@ li {
 
 /* Styling for the aside section with the retro setup */
 .retro-setup-aside {
-    background-color: #2d2d2d;  /* Slightly lighter background for contrast */
+    background-color: #242424;  /* Darker gray background */
     padding: 20px;
-    margin-top: 30px;  /* Add space between expertise content and the aside */
-    border-radius: 8px;
+    margin-top: 30px;  /* Add space between the sections */
+    border-radius: 8px;  /* Rounds the corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
 }
 
-/* Styling for the retro image */
+/* Additional styling for the image inside the aside */
 .retro-image {
-    width: 100%;  /* Make the image responsive */
-    max-width: 500px;  /* Limit the size of the image */
-    height: auto;  /* Maintain aspect ratio */
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     display: block;
-    margin: 20px auto;  /* Center the image */
-    border-radius: 8px;  /* Optional: Rounded corners */
+    margin: 20px auto;
+    border-radius: 8px;  /* Optional: Rounded corners for the image */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Optional: Soft shadow */
 }
 
-/* Additional styling for the aside's heading and paragraph */
+/* Additional styling for the heading and paragraph inside the aside */
 .retro-setup-aside h3 {
-    color: #ffffff;
+    color: #ffffff;  /* White text for the heading */
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 .retro-setup-aside p {
-    color: #b0b0b0;
+    color: #b0b0b0;  /* Light gray text for the paragraph */
     font-size: 1.1rem;
     line-height: 1.6;
 }
