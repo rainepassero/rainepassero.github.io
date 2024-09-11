@@ -46,15 +46,27 @@ header {
 
 /* Navigation Styles */
 nav {
-    background-color: #2d2d2d; /* Dark gray background for nav */
-    padding: 15px 0; /* Add padding to give it some space */
+    display: flex;
+    justify-content: space-between;  /* This will push the logo to the left and links to the center */
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* Logo styles */
+.logo-img {
+    width: 150px;  /* Adjust logo size */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+/* Navigation List Styles */
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center the links */
+    justify-content: center;  /* Center the links */
+    flex-grow: 1;  /* Make the nav take up remaining space after the logo */
     margin: 0;
     padding: 0;
 }
