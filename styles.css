@@ -1,5 +1,5 @@
-/* Importing a modern, clean font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* Importing a monospace font for terminal feel */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -8,214 +8,276 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fira Code', monospace;
     line-height: 1.7;
-    background-color: #1c1c1c; /* Dark gray background */
-    color: #e0e0e0; /* Light gray text */
+    background-color: #000000; /* Pure black background */
+    color: #00FF00; /* Terminal green text */
     padding: 20px;
-    font-size: 17px;  /* Slightly larger font */
-}
-/* General link styles */
-a {
-    color: #3A86FF;  /* Set this to your preferred color */
-    text-decoration: none;  /* Remove the underline */
-    transition: color 0.3s ease;  /* Smooth transition for hover */
+    font-size: 17px;
 }
 
-/* Link hover state */
+/* Scrollbar customization */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00AA00;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00FF00;
+}
+
+/* General link styles */
+a {
+    color: #00FFAA;  /* Light terminal green */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Terminal-style link hover effect */
 a:hover {
-    color: #ffffff;  /* Changes to white when hovered */
-    text-decoration: underline;  /* Optionally add underline on hover */
+    color: #FFFFFF;  /* White text on hover */
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+}
+
+a:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #00FF00;
+    box-shadow: 0 0 8px #00FF00;
+}
+
+/* Terminal text styling */
+.terminal-text {
+    color: #00FF00;
+    font-family: 'Fira Code', monospace;
+}
+
+/* Blinking cursor */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.2em;
+    background-color: #00FF00;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 /* Header Styles */
 header {
-    background: #2d2d2d;  /* Dark gray */
-    color: #ffffff;  /* White text */
+    background: #000000;  /* Black */
+    border-bottom: 1px solid #00FF00;
     padding: 1rem 0;
     text-align: center;
-    box-shadow: none;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
 }
 
 /* Logo Styles */
 .logo-img {
-    width: 150px;  /* Adjust logo size */
-    height: auto;  /* Maintain aspect ratio */
-    margin-right: 20px;  /* Add space between logo and nav */
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 0, 0.5));
 }
 
 /* Navigation Styles */
 nav {
     display: flex;
-    justify-content: space-between;  /* This will push the logo to the left and links to the center */
+    justify-content: space-between;
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
     padding: 15px 0;
-    box-shadow: none; /* Subtle shadow */
-}
-
-/* Logo styles */
-.logo-img {
-    width: 150px;  /* Adjust logo size */
-    height: auto;  /* Maintain aspect ratio */
 }
 
 /* Navigation List Styles */
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;  /* Center the links */
-    flex-grow: 1;  /* Make the nav take up remaining space after the logo */
+    justify-content: center;
+    flex-grow: 1;
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    margin: 0 25px; /* Spacing between the links */
+    margin: 0 25px;
 }
 
 nav ul li a {
-    color: #e0e0e0; /* Light gray text */
-    font-size: 1.1rem; /* Slightly increase the font size */
-    font-weight: 500; /* Make the text a bit bolder */
-    text-decoration: none; /* Remove underlines */
-    padding: 10px 15px; /* Add padding around links */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+    color: #00FF00;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
 }
 
 /* Hover effect for links */
 nav ul li a:hover {
-    background-color: #3A86FF; /* Muted blue background on hover */
-    color: #ffffff; /* White text on hover */
-    border-radius: 5px; /* Rounded corners for hover effect */
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00AA00;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
 }
 
-
-/* Hero Section with background gradient and font styling */
+/* Hero Section with terminal aesthetic */
 #hero {
-    background: linear-gradient(135deg, #1c1c1c, #2d2d2d);  /* Subtle gradient */
-    color: #ffffff;
-    padding: 80px 20px;  /* Reduced padding */
+    background: #000000;
+    border-bottom: 1px solid #00FF00;
+    padding: 80px 20px;
     text-align: center;
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Animated background effect */
-#hero::before {
-    content: "";
-    background: url('path-to-your-background-image.jpg') no-repeat center center/cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;  /* Adds a very light background texture */
-    z-index: 0;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.1) inset;
 }
 
 /* Styling for the main hero heading */
 .hero-content h1 {
-    font-size: 3.2rem;  /* Reduced size for balance */
+    font-size: 3.2rem;
     margin-bottom: 1rem;
-    font-weight: 600;  /* Slightly less bold */
-    position: relative;
-    z-index: 1;  /* Ensures text is on top of background */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Creates depth */
+    font-weight: 600;
+    color: #00FF00;
+    letter-spacing: 5px;
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+}
+
+/* Styling for the subtitle with typing effect */
+.typing-container {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.typing-text {
+    overflow: hidden;
+    font-size: 1.8rem;
+    color: #00CC00;
+    border-right: 2px solid #00FF00;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #00FF00 }
 }
 
 /* Styling for the tagline */
 .hero-content p {
-    font-size: 1.2rem;  /* Slightly smaller tagline */
-    color: #b0b0b0;  /* Softer text color */
-    margin-bottom: 20px;  /* Reduced margin */
-    position: relative;
-    z-index: 1;
+    font-size: 1.2rem;
+    color: #00AA00;
+    margin-bottom: 20px;
+    font-family: 'Fira Code', monospace;
 }
 
-/* Optional: Text animation for a dynamic effect */
-.hero-content h1, .hero-content p {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s forwards ease-out;
-    animation-delay: 0.3s;  /* Delays the animation for a smoother effect */
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* Section Styles */
+/* Container styles */
 .container {
     max-width: 1000px;
     margin: 0 auto 50px auto;
-    padding: 20px 30px;
-    background-color: #2d2d2d;  /* Slightly lighter gray container */
+    padding: 30px 40px;
+    background-color: #000000;
+    border: 1px solid #00AA00;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
 }
 
 h2 {
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 20px;
-    color: #ffffff; /* White for headings */
+    color: #00FF00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
-/* Subheader styles for better visual separation */
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     margin-top: 30px;
-    color: #ffffff;
+    color: #00FF00;
+    font-family: 'Fira Code', monospace;
 }
 
-/* More spacing around dividers and sections */
+/* More emphasis on strong text */
+strong {
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+}
+
+/* Divider styled as a terminal line */
 .divider {
-    height: 2px;
-    background-color: #444;
+    height: 1px;
+    background-color: #00AA00;
     margin: 30px 0;
     border: none;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
-/* Larger padding for container */
-.container {
-    max-width: 1000px;
-    margin: 0 auto 50px auto;
-    padding: 30px 40px; /* Increased padding */
-    background-color: #2d2d2d; /* Slightly lighter gray */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Bullet points for key highlights */
-ul.highlights {
-    list-style-type: disc;
-    padding-left: 40px;
+/* Terminal-style lists */
+.terminal-list {
+    list-style-type: none;
+    padding-left: 0;
     margin-top: 20px;
 }
 
-ul.highlights li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-
-/* Universal styles for lists */
-ul {
-    padding-left: 20px;
+.terminal-list li {
     margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    color: #00DD00;
 }
 
-li {
-    margin-bottom: 10px;
+/* Expertise section styling */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.expertise-item {
+    background-color: rgba(0, 50, 0, 0.3);
+    border: 1px solid #00AA00;
+    padding: 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+}
+
+.expertise-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.3);
+    background-color: rgba(0, 70, 0, 0.4);
+}
+
+.expertise-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    margin-top: 0;
 }
 
 /* Resume Section Styles */
@@ -224,46 +286,43 @@ li {
 }
 
 .job {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
+    padding-left: 20px;
+    border-left: 2px solid #00AA00;
 }
 
 .job h4 {
     font-size: 1.3rem;
-    color: #3A86FF; /* Muted blue for job titles */
+    color: #FFFFFF;
     margin-bottom: 5px;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
 }
 
 .company {
     font-style: italic;
-    color: #b0b0b0; /* Softer gray for company names */
+    color: #00CC00;
 }
 
 .years {
     float: right;
     font-weight: 500;
-    color: #999999; /* Muted gray for years */
+    color: #008800;
 }
 
 .education {
     font-size: 1.1rem;
     margin-bottom: 15px;
-}
-
-/* Expertise Section */
-/* Style for the expertise section */
-#expertise {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+    color: #00DD00;
 }
 
 /* Styling for the aside section with the retro setup */
 .retro-setup-aside {
-    background-color: #242424;  /* Darker gray background */
-    padding: 20px;
-    margin-top: 30px;  /* Add space between the sections */
-    border-radius: 8px;  /* Rounds the corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+    background-color: rgba(0, 40, 0, 0.3);
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border: 1px solid #00AA00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2) inset;
 }
 
 /* Additional styling for the image inside the aside */
@@ -273,48 +332,67 @@ li {
     height: auto;
     display: block;
     margin: 20px auto;
-    border-radius: 8px;  /* Optional: Rounded corners for the image */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Optional: Soft shadow */
+    border: 2px solid #00AA00;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
 }
 
-/* Additional styling for the heading and paragraph inside the aside */
-.retro-setup-aside h3 {
-    color: #ffffff;  /* White text for the heading */
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.retro-setup-aside p {
-    color: #b0b0b0;  /* Light gray text for the paragraph */
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-.skills {
-    list-style-type: circle;
-}
-
-.skills li {
-    margin-bottom: 10px;
-}
-
-/* Divider */
-.divider {
-    height: 1px;
-    background-color: #444;
-    margin: 20px 0;
-    border: none;
+/* Skills container */
+.skills-container {
+    background-color: rgba(0, 40, 0, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #00AA00;
 }
 
 /* Footer */
 footer {
-    background-color: #2d2d2d;
-    color: #b0b0b0;
+    background-color: #000000;
+    color: #00AA00;
     text-align: center;
-    padding: 1rem;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
+    padding:.5rem;
+    border-top: 1px solid #00AA00;
+    font-family: 'Fira Code', monospace;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2) inset;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
+/* Email link special styling */
+.email-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #00FFAA;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background-color: rgba(0, 255, 170, 0.1);
+}
+
+.email-link:hover {
+    background-color: rgba(0, 255, 170, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 170, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
 }
