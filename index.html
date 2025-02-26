@@ -25,6 +25,27 @@
       
 </header>
 
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const welcomeText = document.querySelector('.typing-welcome');
+    const fullText = welcomeText.textContent;
+    welcomeText.textContent = '';
+    
+    let charIndex = 0;
+    
+    function typeWelcome() {
+        if (charIndex < fullText.length) {
+            welcomeText.textContent += fullText.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWelcome, 100);
+        }
+    }
+    
+    // Start typing animation
+    setTimeout(typeWelcome, 500);
+});
+</script>
+
 
 <section id="hero">
     <div class="hero-content">
