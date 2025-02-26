@@ -12,40 +12,20 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+
    <header>
-<section id="terminal-header">
-  <div class="container terminal-header-container">
-    <div class="terminal-welcome">
-      <span class="terminal-prompt">$</span> 
-      <span class="typing-welcome">Welcome to my terminal...</span>
-      <span class="cursor"></span>
-    </div>
+      <nav class="minimal-nav">
+  <div class="nav-container">
+    <span class="nav-prompt">[raine@terminal]$</span>
+    <span class="nav-commands">
+      <a href="#about">cd about</a> | 
+      <a href="#expertise">cd expertise</a> | 
+      <a href="#resume">cd resume</a> | 
+      <a href="#contact">cd contact</a>
+    </span>
   </div>
-</section>
-      
-</header>
-
-   <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const welcomeText = document.querySelector('.typing-welcome');
-    const fullText = welcomeText.textContent;
-    welcomeText.textContent = '';
-    
-    let charIndex = 0;
-    
-    function typeWelcome() {
-        if (charIndex < fullText.length) {
-            welcomeText.textContent += fullText.charAt(charIndex);
-            charIndex++;
-            setTimeout(typeWelcome, 100);
-        }
-    }
-    
-    // Start typing animation
-    setTimeout(typeWelcome, 500);
-});
-</script>
-
+</nav>
+   </header>
 
 <section id="hero">
     <div class="hero-content">
