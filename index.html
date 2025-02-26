@@ -206,5 +206,106 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 500);
 });
 </script>
+   
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Typing effect for interests
+    const typingElements = document.querySelectorAll('.typing-effect');
+    
+    typingElements.forEach(element => {
+        const words = element.getAttribute('data-words').split(', ');
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let currentWord = '';
+        
+        function type() {
+            const word = words[wordIndex];
+            
+            if (isDeleting) {
+                currentWord = word.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                currentWord = word.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            element.textContent = currentWord;
+            
+            if (!isDeleting && charIndex === word.length) {
+                isDeleting = true;
+                setTimeout(type, 1500); // Wait before starting to delete
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, 500); // Wait before typing next word
+            } else {
+                setTimeout(type, isDeleting ? 100 : 200); // Delete faster than type
+            }
+        }
+        
+        type();
+    });
+    
+    // Terminal window interaction
+    const terminalWindows = document.querySelectorAll('.terminal-window');
+    
+    terminalWindows.forEach(window => {
+        window.addEventListener('click', function() {
+            this.classList.add('active');
+            
+            // Add a new line with blinking cursor when terminal is clicked
+            const terminalContent = this.querySelector('.terminal-content');
+            
+            // Only add new line if there isn't already a terminal prompt at the end
+            const lastChild = terminalContent.lastElementChild;
+            if (!lastChild || !lastChild.classList.contains('command-line-active')) {
+                const newLine = document.createElement('p');
+                newLine.className = 'command-line-active';
+                newLine.innerHTML = '$ <span class="cursor"></span>';
+                terminalContent.appendChild(newLine);
+            }
+        });
+    });
+    
+    // Blinking cursor effect
+    setInterval(function() {
+        const cursors = document.querySelectorAll('.cursor');
+        cursors.forEach(cursor => {
+            cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+        });
+    }, 500);
+    
+    // Add hover effect to interest items
+    const interestItems = document.querySelectorAll('.interest-item');
+    
+    interestItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            const badges = this.querySelectorAll('.tech-badge');
+            badges.forEach((badge, index) => {
+                badge.style.animation = `glowPulse 1.5s infinite ${index * 0.2}s`;
+            });
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            const badges = this.querySelectorAll('.tech-badge');
+            badges.forEach(badge => {
+                badge.style.animation = '';
+            });
+        });
+    });
+});
+
+// Add this keyframe animation to your CSS
+document.head.insertAdjacentHTML('beforeend', `
+    <style>
+        @keyframes glowPulse {
+            0% { box-shadow: 0 0 5px rgba(0, 255, 0, 0.3); }
+            50% { box-shadow: 0 0 15px rgba(0, 255, 0, 0.7); }
+            100% { box-shadow: 0 0 5px rgba(0, 255, 0, 0.3); }
+        }
+    </style>
+`);
+</script>
 </body>
 </html>
