@@ -547,3 +547,30 @@ footer {
     color: #00FF00;
     font-family: 'Fira Code', monospace;
 }
+
+.terminal-header-container {
+    max-width: 1000px;
+    margin: 20px auto 40px auto;
+    padding: 20px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+
+.terminal-welcome {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.4rem;
+    color: #00FF00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.terminal-prompt {
+    color: #00DD00;
+    margin-right: 10px;
+}
+
+.typing-welcome {
+    border-right: none;
+}
