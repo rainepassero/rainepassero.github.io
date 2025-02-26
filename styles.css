@@ -396,3 +396,154 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Terminal window styling */
+.terminal-window {
+    background-color: #000000;
+    border: 1px solid #00AA00;
+    border-radius: 6px;
+    margin: 25px 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.terminal-header {
+    background-color: #111111;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #00AA00;
+}
+
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.terminal-button.red { background-color: #FF5F56; }
+.terminal-button.yellow { background-color: #FFBD2E; }
+.terminal-button.green { background-color: #27C93F; }
+
+.terminal-title {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #00DD00;
+}
+
+.terminal-content {
+    padding: 15px;
+    font-family: 'Fira Code', monospace;
+}
+
+.command-line {
+    color: #00FF00;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.command-line::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: #00FF00;
+}
+
+.command-output {
+    color: #CCCCCC;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #003300;
+}
+
+/* Interests grid styling */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.interest-item {
+    background-color: rgba(0, 30, 0, 0.4);
+    border: 1px solid #00AA00;
+    border-radius: 6px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+}
+
+.interest-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.interest-item h4 {
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.tech-badge {
+    display: inline-block;
+    background-color: rgba(0, 255, 0, 0.15);
+    color: #00FF00;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+    margin-top: 12px;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+/* Beyond tech section */
+.beyond-tech {
+    background-color: rgba(0, 30, 0, 0.3);
+    padding: 20px;
+    border-radius: 6px;
+    margin: 25px 0;
+    border-left: 3px solid #00AA00;
+}
+
+/* Typing effect animation */
+.typing-effect {
+    color: #FFFFFF;
+    font-weight: bold;
+    position: relative;
+}
+
+.typing-effect::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #00FF00;
+    animation: blink 0.7s infinite;
+}
+
+/* Outro styling */
+.outro {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: rgba(0, 40, 0, 0.2);
+    border-radius: 6px;
+    position: relative;
+}
+
+.glowing-text {
+    color: #FFFFFF;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+}
+
+.terminal-prompt {
+    margin-top: 20px;
+    color: #00FF00;
+    font-family: 'Fira Code', monospace;
+}
