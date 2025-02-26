@@ -571,6 +571,42 @@ footer {
     margin-right: 10px;
 }
 
+.minimal-nav {
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px 0;
+    border-bottom: 1px dotted #00AA00;
+    max-width: 800px;
+}
+
+.nav-container {
+    display: inline-block;
+    font-family: 'Fira Code', monospace;
+}
+
+.nav-prompt {
+    color: #00CC00;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.nav-commands a {
+    color: #00DDAA;
+    margin: 0 5px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.nav-commands a:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #FFFFFF;
+}
+
+.nav-commands a:hover::after {
+    display: none;
+}
+
 .typing-welcome {
     border-right: none;
 }
