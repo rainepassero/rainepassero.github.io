@@ -375,25 +375,224 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
     nav {
         flex-direction: column;
     }
-    
+
     nav ul {
         margin-top: 20px;
         flex-wrap: wrap;
     }
-    
+
     nav ul li {
         margin: 5px 10px;
     }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
+
+    .minimal-nav {
+        padding: 10px 0;
     }
-    
+
+    .nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-prompt {
+        margin-right: 0;
+    }
+
+    .nav-commands {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .nav-commands a {
+        margin: 2px;
+        font-size: 0.85rem;
+    }
+
+    /* Hero section mobile */
+    #hero {
+        padding: 40px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    .typing-container {
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .typing-text {
+        font-size: 1rem;
+        white-space: normal;
+        border-right: none;
+        animation: none;
+    }
+
+    .hero-content p {
+        font-size: 0.85rem;
+        word-break: break-word;
+    }
+
+    /* Container mobile */
+    .container {
+        padding: 20px 15px;
+        margin: 0 auto 30px auto;
+    }
+
+    /* Headings mobile */
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 1rem;
+        margin-top: 25px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* Terminal window mobile */
+    .terminal-window {
+        margin: 15px 0;
+    }
+
+    .terminal-content {
+        padding: 10px;
+    }
+
+    .terminal-title {
+        font-size: 0.75rem;
+    }
+
+    .command-line,
+    .command-output {
+        font-size: 0.85rem;
+    }
+
+    /* Interest grid mobile */
+    .interests-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .interest-item {
+        padding: 15px;
+    }
+
+    .interest-item h4 {
+        font-size: 1.1rem;
+    }
+
+    .interest-item p {
+        font-size: 0.9rem;
+    }
+
+    .tech-badge {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+        margin-right: 5px;
+        margin-top: 8px;
+    }
+
+    /* Beyond tech mobile */
+    .beyond-tech {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .beyond-tech p {
+        font-size: 0.9rem;
+    }
+
+    /* Terminal list mobile */
+    .terminal-list li {
+        font-size: 0.9rem;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* Outro mobile */
+    .outro {
+        padding: 15px;
+    }
+
+    .glowing-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* Expertise grid mobile */
     .expertise-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .expertise-item {
+        padding: 15px;
+    }
+
+    .expertise-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .expertise-item p {
+        font-size: 0.85rem;
+    }
+
+    /* Resume section mobile */
+    .job {
+        padding-left: 15px;
+        margin-bottom: 25px;
+    }
+
+    .job h4 {
+        font-size: 1.1rem;
+    }
+
+    .company {
+        font-size: 0.85rem;
+        display: block;
+    }
+
+    .years {
+        float: none;
+        display: block;
+        margin-top: 5px;
+        font-size: 0.8rem;
+    }
+
+    .education {
+        font-size: 0.95rem;
+    }
+
+    .skills-container {
+        padding: 15px;
+    }
+
+    /* Footer mobile */
+    footer {
+        padding: 1rem 10px;
+    }
+
+    footer .terminal-text {
+        font-size: 0.7rem;
+        word-break: break-word;
     }
 }
 
